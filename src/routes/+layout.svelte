@@ -1,5 +1,30 @@
 <script>
   import "../app.css";
+	import Footer from "../components/Footer.svelte";
+	import Header from "../components/Header.svelte";
+
+  let y;
+  let innerHeight = 0
+  let innerWidth = 0
+
+  function goToTop() {
+    document.body.scrollIntoView()
+  }
 </script>
 
-<slot />
+<div class="realtive flex flex-col max-w[1440px] mx-auto w-full text-sm sm:text-bas min-h-screen">
+  <div class="">
+    <button class={"fixed bottom-0 w-full duration-200 flex p-10 z-[10]" + (
+      y > 0 ? ' opactiy-full pointer-events-auto' :  ' pointer-events-none opacity-0'
+    )}>
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+  <Header/>
+  <slot />
+  <Footer/>
+</div>
+
+<svelte:window bind:scrollY={y} bind:innerHeight bind:innerWidth/>
+
+
