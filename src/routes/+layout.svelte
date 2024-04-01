@@ -13,14 +13,14 @@
 </script>
 
 <div class="realtive flex flex-col max-w[1440px] mx-auto w-full text-sm sm:text-bas min-h-screen">
-  <div class="">
-    <button class={"fixed bottom-0 w-full duration-200 flex p-10 z-[10]" + (
+  <div class={"fixed bottom-0 w-full duration-200 flex p-10 z-[10]" + (
       y > 0 ? ' opactiy-full pointer-events-auto' :  ' pointer-events-none opacity-0'
     )}>
-      <i class="fa-solid fa-arrow-up"></i>
+    <button on:click={goToTop} class="ml-auto rounded-full bg-slaate-900 text-violet-400 px-3 sm:px-4 hover:bg-slate-800 cursor-pointer">
+      <i class="fa-solid fa-arrow-up grid place-items-center aspect-square"></i>
     </button>
   </div>
-  <Header/>
+  <Header y={y}/>
   <slot />
   <Footer/>
 </div>
