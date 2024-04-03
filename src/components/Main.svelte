@@ -3,7 +3,7 @@
 
 	let steps = [
 		{ name: 'Pawsitively Yours', icon: 'fa-solid fa-paw' },
-		{ name: 'Botanical Bites', icon: 'fa-solid fa-plant-wilt' },
+		{ name: 'Pet Report', icon: 'fa-solid fa-camera' },
 		{ name: 'Botanical Bites Backend', icon: 'fa-solid fa-cookie-bite' }
 	];
 
@@ -82,9 +82,9 @@
 			</Step>
 			<Step step={steps[1]}>
 				<p>
-					Botanical Bites is application for culinary arts being created with <strong
-						class="text-violet-400">React.js + NEXT.js + Gatsby.js</strong
-					> Gatsby.js is used for content
+					Pet Report is a <strong
+						class="text-violet-400">Python</strong
+					> project that takes images and turnt them into a PDF like you would want from a pet sitter maybe.
 				</p>
 			</Step>
 			<Step step={steps[2]}>
